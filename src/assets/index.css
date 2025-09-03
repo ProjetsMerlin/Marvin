@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --primaryColor: #574c5d;
+}
+
+.btn {
+  @apply text-[white] cursor-[pointer] px-[16px] py-[8px] print:hidden;
+  background-color: var(--primaryColor);
+  font-size: 16px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  &.btn--white,
+  &:hover {
+    color: black;
+    border: 1px solid black;
+    background-color: white;
+  }
+
+  &:focus {
+    outline: 0.5px dotted black;
+  }
+}
